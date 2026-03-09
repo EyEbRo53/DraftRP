@@ -1,0 +1,144 @@
+/* LLM Management page — provider list, instances */
+
+.llm-page {
+  min-height: 100vh;
+  background: var(--color-bg-primary);
+  display: flex;
+  flex-direction: column;
+}
+
+.llm-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid var(--color-divider);
+  background: var(--color-bg-secondary);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.llm-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.llm-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-lg);
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ── LLM list ── */
+
+.llm-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.llm-provider-group {
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.llm-provider-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) 0;
+}
+
+.llm-provider-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.llm-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: var(--color-bg-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.llm-icon-box img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.llm-provider-name {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.btn-add-instance {
+  background: none;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    background var(--transition-fast);
+}
+.btn-add-instance:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  background: var(--color-accent-subtle);
+}
+
+/* ── Instance rows ── */
+
+.llm-instance-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) 0 var(--space-sm) calc(40px + var(--space-sm));
+  border-top: 1px solid var(--color-divider);
+}
+
+.instance-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.instance-key {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  font-family: monospace;
+  margin-left: auto;
+  margin-right: var(--space-sm);
+}
+
+.btn-delete-instance {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  padding: 4px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.btn-delete-instance:hover {
+  color: var(--color-error);
+  background: var(--color-error-bg);
+}

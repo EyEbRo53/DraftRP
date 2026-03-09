@@ -1,0 +1,44 @@
+/* Home page — nav cards */
+
+.nav-card {
+  position: relative;
+  display: block;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  text-decoration: none;
+  transition:
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+.nav-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.nav-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    var(--color-bg-primary) 100%
+  );
+}
+
+.nav-card-label {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
